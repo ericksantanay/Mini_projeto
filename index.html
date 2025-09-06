@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Continhas</title>
+</head>
+<body>
+    <main> <!--Inicio/main conteudo principal-->
+        <div class="container_geral">
+            <div><!--Inicio div-->
+                <h1>Contas</h1>
+            </div><!--Fim div-->
+            <section class="conta_1"> <!--Inicio do section 1-->
+                <div class="conta"><!--inicio div conta soma-->
+                    <div>
+                        <h2>Soma</h2>
+                    </div>
+                    <div class="container_input">
+                        <input class="" type="number" name="soma1" id="isoma1"> +
+                        <input type="number" name="soma2" id="isoma2">
+                        <input class="btn" type="button" value="Somar" onclick="somar()">
+                    </div>
+                    <div class="resultados" id="result">Resultado</div>
+                </div><!--Fim da div conta soma-->
+            </section> <!--Fim do section 1-->
+            <section class="conta_1"> <!--Inicio conta2-->
+                <div class="conta"> <!--Inici div conta subtração -->
+                    <div>
+                      <h2>Subtração</h2>
+                    </div>
+                    <div class="container_input"> <!--Inicio div input-->
+                        <input type="number" name="sub1" id="isub1"> -
+                        <input type="number" name="sub2" id="isub2">
+                        <input class="btn" type="button" value="Subtrair" onclick="subtrai()">
+                    </div> <!---Fim div input-->
+                    <div class="resultados" id="res_sub">Resultado</div>
+                </div> <!--Fim div conta subtração-->
+            </section> <!--Fim conta2-->
+            <section class="conta_1"><!---Inicio Conta multiplicação-->
+                <div class="conta"> <!--Inicio conta-->
+                    <div>
+                        <h2>Multiplicação</h2>
+                    </div>
+                    <div class="container_input"> <!---Inicio div input-->
+                        <input type="number" name="mult1" id="imult1"> x
+                        <input type="number" name="mult2" id="imult2">
+                        <input class="btn" type="button" value="Multiplicar" onclick="multiplique()"> 
+                    </div> <!----Fim div input-->
+                    <div class="resultados" id="res_mult">Resultado</div>
+                </div> <!--Fim connta-->
+            </section> <!--fim conta multiplicação-->
+        </div>
+    </main><!--Fim do main-->
+
+    <script>
+             /*Primeira conta, soma*/
+        function somar(){
+            var s1 = document.getElementById('isoma1')
+            var s2 = document.getElementById('isoma2')
+            var r = document.getElementById('result')
+            var n1 = Number(s1.value)
+            var n2 = Number(s2.value)
+            var resul = n1 + n2
+            r.innerText = ('O resultado é: ' + resul)
+        }
+
+        /*--------------------------------*/
+                     /*Conta de -*/
+        function subtrai(){
+            var sb1 = document.getElementById('isub1')
+            var sb2 = document.getElementById('isub2')
+            var subtrai = document.getElementById('res_sub')
+            var su1 = Number(sb1.value)
+            var su2 = Number(sb2.value)
+            var sub_total = su1 - su2
+            subtrai.innerText = ('O resultado é: ' + sub_total)
+        }
+
+        /*---------------------------------------*/
+                     /*Multiplicação*/
+
+            function multiplique(){
+                var mul1 = document.getElementById('imult1')
+                var mul2 = document.getElementById('imult2')
+                var mresul = document.getElementById('res_mult')
+                var m1 = Number(mul1.value)
+                var m2 = Number(mul2.value)
+                var mres = m1 * m2
+                mresul.innerText = ('O resultado é: ' + mres)
+            }
+    </script>
+</body>
+</html>
